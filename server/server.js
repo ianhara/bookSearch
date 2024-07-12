@@ -43,9 +43,7 @@ const startApolloServer = async () => {
 
   //app.use(routes);
 
-  app.use((req, res) => {
-    res.sendFile(path.join(__dirname, '../../client/build/index.html'));
-  });
+  app.use(express.static(path.join(__dirname, './dist/')));
 }
 
 // // Call the async function to start the server
